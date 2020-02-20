@@ -1,0 +1,38 @@
+{
+    "targets": {
+	"default": {
+	    "packages": [
+		"python36",
+		"cerberus_pip"
+	    ]
+	},
+	"fedora31": {
+	    "packages": [
+		"python36",
+		"cerberus"
+	    ]
+	}
+    },
+    "packages": {
+	"python36": {
+	    "type": "distro",
+	    "distro_info": {
+		"pkg_name": "python36"
+	    }
+	},
+	"cerberus_pip": {
+	    "type": "manual",
+	    "manual_info": {
+		"commands": [
+		    "pip3 install cerberus"
+		]
+	    }
+	},
+	"cerberus": {
+	    "type": "distro",
+	    "distro_info": {
+		"pkg_name": "python3-cerberus"
+	    }
+	}
+    }
+}
