@@ -1,26 +1,32 @@
 {
-    "targets": {
-	"default": {
-	    "packages": [
+    "userenvs": [
+	{
+	    "name": "default",
+	    "requirements": [
 		"python36",
 		"cerberus_pip"
 	    ]
 	},
-	"fedora31": {
-	    "packages": [
+	{
+	    "name": "fedora31",
+	    "requirements": [
 		"python36",
 		"cerberus"
 	    ]
 	}
-    },
-    "packages": {
-	"python36": {
+    ],
+    "requirements": [
+	{
+	    "name": "python36",
 	    "type": "distro",
 	    "distro_info": {
-		"pkg_name": "python36"
+		"packages": [
+		    "python36"
+		]
 	    }
 	},
-	"cerberus_pip": {
+	{
+	    "name": "cerberus_pip",
 	    "type": "manual",
 	    "manual_info": {
 		"commands": [
@@ -28,11 +34,14 @@
 		]
 	    }
 	},
-	"cerberus": {
+	{
+	    "name": "cerberus",
 	    "type": "distro",
 	    "distro_info": {
-		"pkg_name": "python3-cerberus"
+		"packages": [
+		    "python3-cerberus"
+		]
 	    }
 	}
-    }
+    ]
 }
