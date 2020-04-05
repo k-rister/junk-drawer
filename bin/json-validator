@@ -4,7 +4,8 @@
 import argparse
 import json
 import traceback
-import cerberus
+
+from jsonschema import validate
 
 
 # define some global variables
@@ -51,11 +52,11 @@ def main():
             print("ERROR: Could not load a valid JSON schema file from %s" % (t_global.args.schema_file))
             return(2)
 
-        v = cerberus.Validator()
-        if v.validate(json_contents, schema_contents):
-            return(0)
-        else:
-            print(v.errors)
+        try:
+            validate(instance=json_contents, schema=schema_contents)
+        except:
+            print("EXCEPTION: %s" % traceback.format_exc())
+            print("ERROR: JSON validation failed for %s using schema %s" % (t_global.args.json_file, t_global.args.schema_file))
             return(3)
             
 
