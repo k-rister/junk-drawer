@@ -9,14 +9,14 @@
 	    "name": "default",
 	    "requirements": [
 		"python36",
-		"cerberus_pip"
+		"jsonschema_pip3"
 	    ]
 	},
 	{
 	    "name": "fedora31",
 	    "requirements": [
 		"python36",
-		"cerberus"
+		"python3-jsonschema"
 	    ]
 	}
     ],
@@ -31,20 +31,20 @@
 	    }
 	},
 	{
-	    "name": "cerberus_pip",
+	    "name": "jsconschema_pip3",
 	    "type": "manual",
 	    "manual_info": {
 		"commands": [
-		    "pip3 install cerberus"
+		    "pip3 install jsonschema"
 		]
 	    }
 	},
 	{
-	    "name": "cerberus",
+	    "name": "python3-jsonschema",
 	    "type": "distro",
 	    "distro_info": {
 		"packages": [
-		    "python3-cerberus"
+		    "python3-jsonschema"
 		]
 	    }
 	}
